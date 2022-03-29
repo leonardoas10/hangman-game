@@ -42,7 +42,7 @@ class HangmanGame:
         if not result:
             self.resolving = False
             os.system("clear")
-            print('YOU HAS GUESSING THE WORD => ', self.word_to_guess)
+            print('YOU GUESSED THE WORD => ', self.word_to_guess)
             self.play_again()
 
         else:
