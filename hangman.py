@@ -1,7 +1,7 @@
 import random
 import os
 import unicodedata
-
+from ascii import Ascii
 class HangmanGame:
     def __init__(self):
         self.word_to_guess = ''
@@ -34,6 +34,7 @@ class HangmanGame:
             self.chances = self.chances - 1
             if self.chances == 0:
                 self.resolving = False
+                Ascii.lose()
                 print('YOU ARE LOST, THE WORD IS => ', self.word_to_guess)
                 self.play_again()
                 
@@ -42,25 +43,28 @@ class HangmanGame:
         if not result:
             self.resolving = False
             os.system("clear")
+            Ascii.win()
             print('YOU GUESSED THE WORD => ', self.word_to_guess)
             self.play_again()
-
         else:
             print('KEEP GOING!')
 
     def play_again(self):
         answer = input('Do you wanna play again? (Y): ')
-        if answer == 'Y':
+        if answer == 'Y' or answer == "y":
             self.resolving = True
             self.run()
         else:
             os.system("clear")
+            Ascii.bye()
             print('Thanks for playing HANGMAN. Atte. Leonardo')
 
     def run(self):
         try:
             self.read_file()
-            print('HANGMAN GAME!', self.word_to_guess)
+            Ascii.start()
+            # print('HANGMAN GAME!', self.word_to_guess)
+            print('HANGMAN GAME!')
             while self.resolving:
                 print('You have {} strikes less!'.format(self.chances))
                 print(self.dashes)
