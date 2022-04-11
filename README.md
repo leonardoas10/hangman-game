@@ -13,7 +13,7 @@ Builted with <span style="color:red">Python 3 it contains:
 
 ## Run the app
 
--   Install: ascii_magic
+-   Execute `python -m pip install -r requirements.txt`
 -   Execute `python hangman.py` and start guessing the words!
 
 ## Screenshot
