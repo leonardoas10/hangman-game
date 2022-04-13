@@ -10,6 +10,8 @@ Builted with <span style="color:red">Python 3 it contains:
 -   handler try/except
 -   reading file
 -   ordered contect and converted
+-   multi language
+-   record for points
 
 ## Run the app
 

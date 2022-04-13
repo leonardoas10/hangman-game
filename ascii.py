@@ -1,5 +1,6 @@
 import ascii_magic
 
+
 class Ascii:
     @staticmethod
     def start():
